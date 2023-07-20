@@ -5,14 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Black Themed Webpage</title>
   <style>
-    /* ... (previous CSS styles) ... */
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Add your custom CSS styles here */
+
+    /* Example: Centering content on the page */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .video-container {
+      width: 80%;
+      max-width: 600px; /* Limit the width of the video container */
+    }
+
+    video {
+      width: 100%; /* Set the width of the video to fit the container */
+      height: auto;
+    }
+
+    .text {
+      width: 80%;
+      max-width: 600px; /* Limit the width of the content container */
+      padding: 20px;
+      text-align: center;
+    }
+
+    .suggestions-button {
+      margin-top: 20px;
+      background: linear-gradient(to right, red, skyblue);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    /* Media query for smaller screens */
+    @media only screen and (max-width: 600px) {
+      .container {
+        flex-direction: column;
+      }
+      .video-container, .text {
+        width: 100%;
+      }
+    
+    }
+    h3{
+      color: rgb(120,120,120);
+      
+    }
+
   </style>
 </head>
 <body>
-  <h2 style="font-family: Arial, sans-serif; text-align: center;">🚀Let Your Voice Shape the Movie Experience! 🎬💫</h2>
+  <h2 style="font-family: Arial, sans-serif; text-align: center;">🚀Let Your Voice Shape the Movie Experience!  🎬💫</h2>
   <div class="container">
     <div class="video-container">
-      <video controls autoplay loop muted>
+      <video controls autoplay loop>
         <source src="celebrate.mp4" type="video/mp4">
         <!-- If you have other video formats, you can add them as additional <source> elements -->
         Your browser does not support the video tag.
@@ -23,8 +84,11 @@
       <p>Where Movie Magic Meets Social Frenzy! 🎬✨ Join synchronized watch parties, react in real-time video calls, and suggest your favorite films! Embrace the unpredictable, become a movie wizard, and light up the movieverse! 🚀🎉 Your cinematic adventure starts here! 🌌🎥💫</p>
       <h4>🎥 Your Movieverse Ideas Wanted🚀</h4>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLScKP7zuHiyrflXq1uX26R8wfqq_rQaZEdb9M-BO6qROS8QX8w/viewform?usp=sf_link" class="suggestions-button">Suggest Here🍿</a>
-      <p style="text-align: center; font-size: 14px; margin-top: 20px;">@VJMsolutions 2023-2024.  All rights reserved. &copy;</p>
+ <p style="text-align: center; font-size: 14px; margin-top: 20px;">@VJMsolutions 2023-2024.  All rights reserved. &copy;</p>
+</body>     
+      
     </div>
+    
   </div>
 </body>
 </html>
