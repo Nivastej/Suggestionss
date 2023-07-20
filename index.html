@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Black Themed Webpage</title>
+  <title>suggest here</title>
   <style>
     body {
       background-color: black;
@@ -69,13 +69,14 @@
 
   </style>
 </head>
+
 <body>
-  <h2 style="font-family: Arial, sans-serif; text-align: center;">🚀Let Your Voice Shape the Movie Experience!  🎬💫</h2>
+  <h2 style="font-family: Arial, sans-serif; text-align: center;">🚀Let Your Voice Shape the Movie Experience! 🎬💫</h2>
   <div class="container">
     <div class="video-container">
-      <video controls autoplay loop>
+      <video id="videoPlayer" controls loop muted>
         <source src="celebrate.mp4" type="video/mp4">
-        
+        <!-- If you have other video formats, you can add them as additional <source> elements -->
         Your browser does not support the video tag.
       </video>
     </div>
@@ -84,11 +85,25 @@
       <p>Where Movie Magic Meets Social Frenzy! 🎬✨ Join synchronized watch parties, react in real-time video calls, and suggest your favorite films! Embrace the unpredictable, become a movie wizard, and light up the movieverse! 🚀🎉 Your cinematic adventure starts here! 🌌🎥💫</p>
       <h4>🎥 Your Movieverse Ideas Wanted🚀</h4>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLScKP7zuHiyrflXq1uX26R8wfqq_rQaZEdb9M-BO6qROS8QX8w/viewform?usp=sf_link" class="suggestions-button">Suggest Here🍿</a>
- <p style="text-align: center; font-size: 14px; margin-top: 20px;">@VJMsolutions 2023-2024.  All rights reserved. &copy;</p>
-</body>     
-      
+      <p style="text-align: center; font-size: 14px; margin-top: 20px;">@VJMsolutions 2023-2024.  All rights reserved. &copy;</p>
     </div>
-    
   </div>
+
+  <script>
+    // Function to autoplay the video if it's the first visit
+    function playVideo() {
+      const videoPlayer = document.getElementById("videoPlayer");
+      videoPlayer.play().catch(error => {
+        console.log("Autoplay failed:", error);
+      });
+    }
+
+    // Check if the video has already played (if it's not the first visit)
+    if (!localStorage.getItem("videoPlayed")) {
+      // If it's the first visit, play the video and set the localStorage flag
+      playVideo();
+      localStorage.setItem("videoPlayed", "true");
+    }
+  </script>
 </body>
 </html>
